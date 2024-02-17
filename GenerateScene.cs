@@ -33,10 +33,23 @@ public class GenerateScene : MonoBehaviour
     {
         for (int i = 1; i < stonesRequired; i++)
         {
-            for (int j = 1; j < stonesRequired; j++)
+            for (int j = 5; j > i; j--)
             {
-                // Star pyramid algorithm
+                for (int k = 5; k > i; k--)
+                {
+                    float x = j * 1.0f - i * 1.0f / 2f;
+                    float y = i * 1.0f;
+                    float z = k * 1.0f - i * 1.0f / 2f;
+
+                    
+                    GameObject stone = GameObject.CreatePrimitive((PrimitiveType.Cube));
+                    GameObject pyramid = new GameObject();
+                    stone.transform.position = new Vector3(x, y, z);
+
+                }
+                
             }
+            
         }
     }
 
