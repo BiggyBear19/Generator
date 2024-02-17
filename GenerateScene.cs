@@ -27,6 +27,7 @@ public class GenerateScene : MonoBehaviour
     void GenerateGround()
     {
         GameObject ground = GameObject.CreatePrimitive(PrimitiveType.Plane);
+        ground.transform.localScale = new Vector3(1.5f, 1, 1.5f);
     }
 
     void GeneratePyramid()
